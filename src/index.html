@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-[#C5E4E7] font-space-mono">
+    <!-- custom css -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .no-spin-buttons::-webkit-inner-spin-button,
+        .no-spin-buttons::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        }
+        #tips button {
+            color: #fff;
+            background-color: #00474B;
+            padding: 12px 43px;
+            border-radius: 5px;
+        }
+    </style>
+
+    <!-- header -->
+
+    <div class="container mx-auto flex justify-center items-center pt-12">
+        <div id="header">
+            <div id="header-inner">
+                <img src="./assets/images/SPLITTER.svg" alt="SPLITTER">
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+
+    <div class="flex justify-center">
+        <div class="container bg-white px-8 mt-10 flex flex-col rounded-3xl md:h">
+            <!-- content -->
+            <div class="xl:flex xl:justify-between xl:mx-12 xl:my-11">
+                <!-- FIRST CONTENT -->
+                <div id="first-content" class="xl:w-2/3 xl:pr-10">
+                     <!-- bill -->
+                    <div id="bill" class="mt-8">
+                        <h2 class="pb-1.5 text-[#5E7A7D] text-base">Bill</h2>
+                        <div id="input-container" class="relative">
+                            <!-- bill input -->
+                            <input type="number" id="bill-input" placeholder="0" name="bill-text" dir="rtl" class="relative bg-[#F3F9FA] md:w-full px-4 py-1.5 rounded-md no-spin-buttons outline-none">
+                            <img src="./assets/images/dollar.svg" alt="dollar" class="absolute top-1/2 transform -translate-y-1/2 left-2">
+                        </div>
+                    </div>
+                    <!-- select tip -->
+                    <div id="select-tip" class="flex flex-col mt-8">
+                        <h2 class="mb-4">Select Tip %</h2>
+                        <div id="tips" class="grid grid-rows-2 grid-cols-2 gap-4">
+                            <button id="tip-btn">5%</button>
+                            <button id="tip-btn">10%</button>
+                            <button id="tip-btn">15%</button>
+                            <button id="tip-btn">25%</button>
+                            <button id="tip-btn">50%</button>
+                            <input type="number" id="custom-tip" name="tip" placeholder="Custom" dir="rtl" class="bg-[#F3F9FA] rounded-md outline-none no-spin-buttons text-2xl pr-3">
+                        </div>
+                    </div>
+                    <!-- people quantity -->
+                    <div id="people-quantity" class="mt-8">
+                        <div id="input-container" class="relative">
+                            <h2 class="mb-3">Number of People</h2>
+                            <div id="quantity-of-people"  class="relative">
+                                <input type="number" id="quantity" name="people-number" placeholder="0" dir="rtl" class="relative bg-[#F3F9FA] md:w-full px-4 py-1.5 no-spin-buttons outline-none rounded-md">
+                                <img src="./assets/images/user-icon.svg" alt="user-icon" class="absolute top-1/2 transform -translate-y-1/2 left-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- SECOND CONTENT -->
+                <div id="second-content" class="xl:w-1/3">
+                     <!-- sum content -->
+                <div id="sum" class="text-white bg-[#00474B] rounded-xl py-9 px-6 mt-8 xl:mt-0 mb-4 md:text-center xl:text-start xl:h-full">
+                    <div id="sum-content" class="xl:px-10 xl:py-10">
+                        <div id="tip-on-person" class="flex justify-between">
+                            <div>
+                                <h2 class="xl:text-base">Tip Amount</h2>
+                                <h3 class="text-[#7F9D9F] text-sm">/ person</h3>
+                            </div>
+                            <div>
+                                <h1 class="text-3xl text-[#26C2AE] xl:text-4xl" id="person-sum">$0</h1>
+                            </div>
+                        </div>
+                    <div id="total-on_person" class="flex justify-between pt-6 pb-10">
+                        <div>
+                            <h2 class="text-base">Total</h2>
+                            <h3 class="text-[#7F9D9F] text-sm">/ person</h3>
+                        </div>
+                        <div>
+                            <h1 class="text-3xl	text-[#26C2AE] xl:text-4xl" id="total-sum">$0</h1>
+                        </div>
+                    </div>
+                    </div>
+                <div id="reset" class="flex justify-center items-center xl:pt-20">
+                    <button id="reset-btn" class=" bg-[#26C2AE] px-28 py-2.5 rounded-lg">RESET</button>
+                </div>
+                <!-- END SECOND CONTENT -->
+        </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
